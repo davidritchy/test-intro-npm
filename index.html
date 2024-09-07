@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.min.js" integrity="sha512-3GRj7sme01zpWwRNPNy48Rda1bD9cq34lqYG5vb8ZXGc+wRqsoBJ3+AC25IYW5w5SrWlzHqIpNIxZt5QF9sXLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>NPM</title>
-  <script type="module" crossorigin src="/test-intro-npm/assets/index-Dw7OLHyK.js"></script>
-  <link rel="stylesheet" crossorigin href="/test-intro-npm/assets/index-DItlE99G.css">
-</head>
-<body>
+    <script type="module" crossorigin src="/test-intro-npm/assets/index-CZrsT6J0.js"></script>
+    <link rel="stylesheet" crossorigin href="/test-intro-npm/assets/index-0M-_EDzx.css">
+  </head>
+  <body>
     <main>
-        
-        <!-- <h1>{{titre}}</h1> -->
-        <h1>Recherche d'emploi</h1>
+      <h1>Recherche d'emploi</h1>
 
-        <div class="grande_navigation">
-            <div class="navigation">
-                <div id="navigation_2"><p>Précédent</p></div>
-                <div id="navigation_1"><p>Next</p></div>
+      <div class="grande_navigation">
+        <div class="navigation">
+          <div id="navigation_2"><p>Précédent</p></div>
+          <div id="navigation_1"><p>Suivant</p></div>
+        </div>
+
+        <nav>
+          <a href="./source">
+            <i class="fa-solid fa-globe"></i>
+            <ul>
+              <li>Source</li>
+            </ul>
+          </a>
+        </nav>
+      </div>
+
+      <template id="abribus">
+        {{#job}}
+        <div class="card" id="{{ID}}">
+          <div class="detail">
+            <h2>Titre emploi : {{Titre_emploi}}</h2>
+            <p>Id de l'emploi : {{Emploi_ID}}</p>
+
+            <div class="invisible" id="voir_plus">
+              <p>Statut d'emploi : {{Statut_emploi}}</p>
+              <p>Secteur d'emploi : {{Secteur_emploi}}</p>
+              <p>Quart de travail : {{Quart_de_travail}}</p>
+              <p>Description : {{Breve_description}}</p>
+              <p>Exigences : {{Exigeneces}}</p>
+              <p>
+                Date debut a postuler :
+                <span id="date-1">{{Date_debut_postuler}}</span>
+              </p>
+              <p>
+                Date limite a postuler :
+                <span id="date-2">{{Date_limite_postuler}}</span>
+              </p>
+              <p>Emplacement : {{Emplacement}}</p>
             </div>
-    
-            <nav>
-                <a href="./source">
-                <i class="fa-solid fa-globe"></i>
-                <ul>
-                    <li>Source</li>
-                </ul>
-                </a>
-            </nav>
-        </div>
+          </div>
 
-        
-        <template id="abribus">
-                {{#job}}
-                <div class="card" id="{{ID}}">
-                    <div class="detail">
-                        <h2>Titre emploi : {{Titre_emploi}}</h2>
-                        <p>Id de l'emploi : {{Emploi_ID}}</p>
-                        <!-- <p>Statut d'emploi : {{Statut_emploi}}</p>
-                        <p>Secteur d'emploi : {{Secteur_emploi}}</p>
-                        <p>Quart de travail : {{Quart_de_travail}}</p> -->
-                        <div class="invisible" id="voir_plus">
-                            <p>Statut d'emploi : {{Statut_emploi}}</p>
-                            <p>Secteur d'emploi : {{Secteur_emploi}}</p>
-                            <p>Quart de travail : {{Quart_de_travail}}</p>
-                            <p>Description : {{Breve_description}}</p>
-                            <p>Exigences : {{Exigeneces}}</p>
-                            <p>Date debut a postuler : <span id="date-1">{{Date_debut_postuler}}</span></p>
-                            <p>Date limite a postuler : <span id="date-2">{{Date_limite_postuler}}</span></p>
-                            <p>Emplacement : {{Emplacement}}</p>
-                        </div>
-                    </div>
-  
-                    <!-- <p>Emplacement : {{Emplacement}}</p> -->
-                    <div id="voir">
-                        <p>Voir plus</p>
-                        <div  class="cacher invisible"><p>cacher infos</p></div>
-                    </div>
-                </div>
-                {{/job}}
-        </template>
-        <div class="essai">
-           
+          <div id="voir">
+            <p>Voir plus</p>
+            <div class="cacher invisible"><p>cacher infos</p></div>
+          </div>
         </div>
+        {{/job}}
+      </template>
+      <div class="essai"></div>
 
       <div class="source invisible">
-        <div class="source_desc "><p>Ce site s'est inspiré des ressources de la banque de données Québec.</p></div>
+        <div class="source_desc">
+          <p>
+            Ce site s'est inspiré des ressources de la banque de données Québec.
+          </p>
+        </div>
       </div>
     </main>
-   <footer>Tous droits réservés &copy;2024</footer>
-</body>
+    <footer>Tous droits réservés &copy;2024</footer>
+  </body>
 </html>
