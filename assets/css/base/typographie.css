@@ -1,0 +1,21 @@
+:root{
+
+    --x--x--small : 15px;
+    --x--x--: 7px;
+    --x--small : 20px;
+    --x-Xsmall : 40px;
+    --x-medium : 60px;
+    --x--Xmedium :24rem;
+    --x-large : 80px;
+    --x-x-large: 100px;
+    --large: 120px;
+    --Xlarge: 80rem;
+    --XXlarge: 84rem;
+
+    --primaire-- : #ff0000;
+    --secondaire-- : #ffffff;
+    --ternaire-- : #f08372;
+    --quatre-- :#0000ff;
+}
+
+

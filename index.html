@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="/assets/js/index.js"></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>NPM</title>
+  </head>
+  <body>
+    <main>
+      <h1>Recherche d'emploi</h1>
+
+      <div class="grande_navigation">
+        <div class="navigation">
+          <div id="navigation_2"><p>Précédent</p></div>
+          <div id="navigation_1"><p>Suivant</p></div>
+        </div>
+
+        <nav>
+          <a href="./source">
+            <i class="fa-solid fa-globe"></i>
+            <ul>
+              <li>Source</li>
+            </ul>
+          </a>
+        </nav>
+      </div>
+
+      <template id="abribus">
+        {{#job}}
+        <div class="card" id="{{ID}}">
+          <div class="detail">
+            <h2>Titre emploi : {{Titre_emploi}}</h2>
+            <p>Id de l'emploi : {{Emploi_ID}}</p>
+
+            <div class="invisible" id="voir_plus">
+              <p>Statut d'emploi : {{Statut_emploi}}</p>
+              <p>Secteur d'emploi : {{Secteur_emploi}}</p>
+              <p>Quart de travail : {{Quart_de_travail}}</p>
+              <p>Description : {{Breve_description}}</p>
+              <p>Exigences : {{Exigeneces}}</p>
+              <p>
+                Date debut a postuler :
+                <span id="date-1">{{Date_debut_postuler}}</span>
+              </p>
+              <p>
+                Date limite a postuler :
+                <span id="date-2">{{Date_limite_postuler}}</span>
+              </p>
+              <p>Emplacement : {{Emplacement}}</p>
+            </div>
+          </div>
+
+          <div id="voir">
+            <p>Voir plus</p>
+            <div class="cacher invisible"><p>cacher infos</p></div>
+          </div>
+        </div>
+        {{/job}}
+      </template>
+      <div class="essai"></div>
+
+      <div class="source invisible">
+        <div class="source_desc">
+          <p>
+            Ce site s'est inspiré des ressources de la banque de données Québec.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>Tous droits réservés &copy;2024</footer>
+  </body>
+</html>

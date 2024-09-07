@@ -1,0 +1,32 @@
+{
+  "name": "test-intro-npm",
+  "version": "1.0.0",
+  "description": "un site pour recherche emploi",
+  "main": "index.js",
+  "homepage": "https://davidritchy.github.io/test-intro-npm",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "dev": "vite -- open",
+    "build": "vite build",
+    "test": "mocha"
+  },
+  "author": "david lamothe",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^3.2.2",
+    "moment": "^2.30.1",
+    "mustache": "^4.2.0",
+    "page": "^1.11.6",
+    "pages": "^0.0.16",
+    "three": "^0.168.0",
+    "vite": "^5.4.3"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "gh-pages": "^6.1.1",
+    "mocha": "^10.7.3",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-webp-compress": "^1.1.4"
+  }
+}
